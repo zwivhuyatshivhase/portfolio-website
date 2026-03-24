@@ -1,3 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 body::before {
     content: "";
     position: fixed;
@@ -35,10 +51,15 @@ header nav a {
 }
 
 .hero {
-    background: url('images/white-wine.png') no-repeat center center/cover;
+    background: url('images/white-wine.png') no-repeat center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     color: #fff;
-    padding: 80px 20px;
+    padding: 20px;
 }
 
 .hero h1 {
@@ -51,10 +72,15 @@ header nav a {
 
 .about-hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('images/sparkling-wine.png') no-repeat center center/cover;
-    color: white;
+                url('images/sparkling-wine.png') no-repeat center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    padding: 80px 20px;
+    color: white;
+    padding: 20px;
 }
 
 .about-hero h1 {
@@ -130,7 +156,8 @@ header nav a {
 
 .wine-card img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 12px;
 }
 
@@ -154,10 +181,6 @@ header nav a {
     width: 100%;
 }
 
-.contact-form h2, .contact-info h2 {
-    margin-bottom: 15px;
-}
-
 .map {
     padding: 20px;
     text-align: center;
@@ -169,7 +192,6 @@ footer {
     text-align: center;
     padding: 20px;
 }
-
 @media (max-width: 1024px) {
     .wine-card {
         width: 200px;
@@ -177,12 +199,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .wine-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
     header {
         flex-direction: column;
         align-items: center;
@@ -192,12 +208,25 @@ footer {
         margin: 10px 0;
     }
 
+    .wine-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
     .hero h1 {
         font-size: 28px;
     }
 
     .hero p {
         font-size: 16px;
+    }
+
+    .about-hero {
+        height: 40vh;
     }
 
     .about-hero h1 {
