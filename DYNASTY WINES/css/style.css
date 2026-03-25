@@ -33,35 +33,59 @@ header nav a {
     font-weight: 500;
 }
 .hero {
-    background: url('../images/white-wine.png') no-repeat center center/cover;
     text-align: center;
     color: #fff;
-    padding: 100px 20px;
+    position: relative;
+    padding: 20px;
 }
 
-.hero h1 {
-    font-size: 48px;
+.hero img {
+    width: 100%;      
+    height: auto;     
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
 }
 
-.hero p {
-    font-size: 20px;
-}
-.about-hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('../images/sparkling-wine.png') no-repeat center center/cover;
-    color: white;
+.hero-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    padding: 100px 20px;
+}
+
+.about-hero {
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 20px;
+}
+
+.about-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.about-hero h1, .about-hero p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .about-hero h1 {
+    top: 25%;
     font-size: 42px;
 }
 
 .about-hero p {
+    top: 55%;
     font-size: 18px;
 }
-
 .about {
     max-width: 900px;
     margin: 50px auto;
@@ -126,10 +150,10 @@ header nav a {
 }
 
 .wine-card img {
-    width: 100%;  
-    height: auto;  
-    border-radius: 12px;
+    width: 100%; 
+    height: auto;
     display: block;
+    border-radius: 12px;
 }
 
 .contact-hero {
@@ -147,27 +171,9 @@ header nav a {
     flex-wrap: wrap;
 }
 
-.contact-form {
+.contact-form, .contact-info {
     max-width: 400px;
     width: 100%;
-}
-
-.contact-form h2 {
-    margin-bottom: 15px;
-}
-
-.contact-info {
-    max-width: 400px;
-    width: 100%;
-}
-
-.contact-info h2 {
-    margin-bottom: 15px;
-}
-
-.map {
-    padding: 20px;
-    text-align: center;
 }
 
 footer {
@@ -180,6 +186,7 @@ footer {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 @media (max-width: 1024px) {
@@ -210,26 +217,24 @@ img {
         margin: 10px 0;
     }
 
-    .wine-grid {
+    .wine-grid, .values-grid {
         flex-direction: column;
         align-items: center;
-    }
-
-    .values-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero {
-        padding: 70px 20px;
-    }
-
-    .about-hero {
-        padding: 70px 20px;
     }
 
     .wine-card, .values-grid div {
         width: 90%;
+    }
+
+    .hero-content, .about-hero h1, .about-hero p {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .hero img, .about-hero img {
+        max-height: none;
     }
 }
 
