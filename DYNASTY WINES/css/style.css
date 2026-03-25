@@ -32,6 +32,7 @@ header nav a {
     margin-left: 20px;
     font-weight: 500;
 }
+
 .hero {
     text-align: center;
     color: #fff;
@@ -40,12 +41,11 @@ header nav a {
 }
 
 .hero img {
-    width: 100%;      
-    height: auto;     
-    max-height: 400px;
+    width: 100%;
+    height: auto;
     display: block;
-    margin: 0 auto;
     border-radius: 12px;
+    max-height: 400px;
 }
 
 .hero-content {
@@ -58,7 +58,6 @@ header nav a {
 
 .about-hero {
     text-align: center;
-    color: white;
     position: relative;
     padding: 20px;
 }
@@ -67,25 +66,18 @@ header nav a {
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
     border-radius: 12px;
 }
 
-.about-hero h1, .about-hero p {
+.about-content {
     position: absolute;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
 }
 
-.about-hero h1 {
-    top: 25%;
-    font-size: 42px;
-}
-
-.about-hero p {
-    top: 55%;
-    font-size: 18px;
-}
 .about {
     max-width: 900px;
     margin: 50px auto;
@@ -150,7 +142,7 @@ header nav a {
 }
 
 .wine-card img {
-    width: 100%; 
+    width: 100%;
     height: auto;
     display: block;
     border-radius: 12px;
@@ -226,11 +218,10 @@ img {
         width: 90%;
     }
 
-    .hero-content, .about-hero h1, .about-hero p {
+    .hero-content, .about-content {
         position: static;
         transform: none;
-        text-align: center;
-        margin: 10px 0;
+        margin-top: 15px;
     }
 
     .hero img, .about-hero img {
