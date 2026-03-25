@@ -43,14 +43,15 @@ header nav a {
 .hero img {
     width: 100%;
     height: auto;
+    max-height: 250px;
     display: block;
     border-radius: 12px;
-    max-height: 400px;
+    margin: 0 auto;
 }
 
 .hero-content {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -65,13 +66,15 @@ header nav a {
 .about-hero img {
     width: 100%;
     height: auto;
+    max-height: 250px;
     display: block;
     border-radius: 12px;
+    margin: 0 auto;
 }
 
 .about-content {
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -144,6 +147,7 @@ header nav a {
 .wine-card img {
     width: 100%;
     height: auto;
+    max-height: 200px;
     display: block;
     border-radius: 12px;
 }
@@ -185,15 +189,12 @@ img {
     .hero h1 {
         font-size: 36px;
     }
-
     .hero p {
         font-size: 18px;
     }
-
     .about-hero h1 {
         font-size: 32px;
     }
-
     .about-hero p {
         font-size: 16px;
     }
@@ -204,26 +205,21 @@ img {
         flex-direction: column;
         align-items: center;
     }
-
     header nav a {
         margin: 10px 0;
     }
-
     .wine-grid, .values-grid {
         flex-direction: column;
         align-items: center;
     }
-
     .wine-card, .values-grid div {
         width: 90%;
     }
-
     .hero-content, .about-content {
         position: static;
         transform: none;
-        margin-top: 15px;
+        margin-top: 10px;
     }
-
     .hero img, .about-hero img {
         max-height: none;
     }
@@ -233,19 +229,15 @@ img {
     .hero h1 {
         font-size: 28px;
     }
-
     .hero p {
         font-size: 16px;
     }
-
     .about-hero h1 {
         font-size: 24px;
     }
-
     .about-hero p {
         font-size: 14px;
     }
-
     .contact-container {
         flex-direction: column;
         align-items: center;
